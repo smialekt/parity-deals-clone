@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: parity-db
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - '${POSTGRES_PORT}:5432'
+    environment:
+      - PGDATA=/var/lib/postgresql/data/parity_deals_data
+    volumes:
+      - ./db_data:/var/lib/postgresql/data

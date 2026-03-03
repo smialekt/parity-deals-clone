@@ -5,7 +5,7 @@ import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 
 export function NavBar() {
   return (
-    <header className='flex py-y shadow-xl fixed top-o w-full z-10 bg-background/90'>
+    <header className='flex py-4 shadow-xl fixed top-0 w-full z-10 bg-background/90'>
       <nav className='flex items-center gap-10 container font-semibold'>
         <Link href='/' className='mr-auto'>
           <BrandLogo />

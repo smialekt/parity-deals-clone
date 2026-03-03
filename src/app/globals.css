@@ -128,12 +128,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@utility container {
-  margin-inline: auto;
-  padding: 1.5rem;
-  width: 100%;
+@layer components {
+  .container {
+    margin-inline: auto;
+    padding: 1.5rem;
+    width: 100%;
 
-  @media (width <= theme(--breakpoint-xl)) {
-    max-width: var(--breakpoint-xl);
+    @media (width <= theme(--breakpoint-xl)) {
+      max-width: var(--breakpoint-xl);
+    }
   }
 }
